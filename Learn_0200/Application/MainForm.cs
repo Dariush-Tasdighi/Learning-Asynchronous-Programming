@@ -46,4 +46,12 @@ public partial class MainForm : Infrastructure.BaseForm
 
 		myForm.ShowDialog();
 	}
+
+	private void Sample6Button_Click
+		(object sender, System.EventArgs e)
+	{
+		var myForm = new Form6();
+
+		myForm.ShowDialog();
+	}
 }

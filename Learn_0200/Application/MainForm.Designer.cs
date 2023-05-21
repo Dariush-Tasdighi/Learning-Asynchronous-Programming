@@ -23,6 +23,7 @@ partial class MainForm
 		sample3Button = new System.Windows.Forms.Button();
 		sample4Button = new System.Windows.Forms.Button();
 		sample5Button = new System.Windows.Forms.Button();
+		sample6Button = new System.Windows.Forms.Button();
 		SuspendLayout();
 		// 
 		// sample1Button
@@ -85,11 +86,24 @@ partial class MainForm
 		sample5Button.UseVisualStyleBackColor = true;
 		sample5Button.Click += Sample5Button_Click;
 		// 
+		// sample6Button
+		// 
+		sample6Button.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right;
+		sample6Button.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+		sample6Button.Location = new System.Drawing.Point(12, 337);
+		sample6Button.Name = "sample6Button";
+		sample6Button.Size = new System.Drawing.Size(412, 59);
+		sample6Button.TabIndex = 5;
+		sample6Button.Text = "Sample 6";
+		sample6Button.UseVisualStyleBackColor = true;
+		sample6Button.Click += Sample6Button_Click;
+		// 
 		// MainForm
 		// 
 		AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
 		AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-		ClientSize = new System.Drawing.Size(436, 392);
+		ClientSize = new System.Drawing.Size(436, 408);
+		Controls.Add(sample6Button);
 		Controls.Add(sample5Button);
 		Controls.Add(sample4Button);
 		Controls.Add(sample3Button);
@@ -107,4 +121,5 @@ partial class MainForm
 	private System.Windows.Forms.Button sample3Button;
 	private System.Windows.Forms.Button sample4Button;
 	private System.Windows.Forms.Button sample5Button;
+	private System.Windows.Forms.Button sample6Button;
 }
