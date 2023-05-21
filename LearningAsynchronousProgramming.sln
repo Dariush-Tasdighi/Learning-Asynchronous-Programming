@@ -12,6 +12,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Learn_0200\Application\Application.csproj", "{9FF8EB7F-521E-424E-ACF3-2EEA5CF34FAE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{E65BFB68-268C-4553-9A87-D41FA818FD21}"
+	ProjectSection(SolutionItems) = preProject
+		docs\Readme.docx = docs\Readme.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
