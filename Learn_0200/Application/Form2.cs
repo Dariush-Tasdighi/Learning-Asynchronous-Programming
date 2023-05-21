@@ -57,7 +57,7 @@ public partial class Form2 : Infrastructure.BaseForm
 		(Models.WebsiteDataModel websiteData)
 	{
 		resultTextBox.Text +=
-			$"{websiteData.Url} downloaded: {websiteData.ContentLength} Characters long.";
+			$"{websiteData.Url} downloaded: {websiteData.ContentLength:#,##0} Characters long.";
 
 		resultTextBox.Text +=
 			System.Environment.NewLine;

@@ -74,6 +74,9 @@ public partial class Form5 : Infrastructure.BaseForm
 		var client =
 			new System.Net.Http.HttpClient();
 
+		//result.Content =
+		//	client.DownloadString(address: websiteUrl);
+
 		result.Content =
 			await
 			client.GetStringAsync(requestUri: websiteUrl);
@@ -85,7 +88,7 @@ public partial class Form5 : Infrastructure.BaseForm
 		(Models.WebsiteDataModel websiteData)
 	{
 		resultTextBox.Text +=
-			$"{websiteData.Url} downloaded: {websiteData.ContentLength} Characters long.";
+			$"{websiteData.Url} downloaded: {websiteData.ContentLength:#,##0} Characters long.";
 
 		resultTextBox.Text +=
 			System.Environment.NewLine;

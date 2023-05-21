@@ -1,4 +1,4 @@
-﻿namespace Application.Infrastructure;
+﻿namespace Infrastructure;
 
 public partial class BaseForm : System.Windows.Forms.Form
 {

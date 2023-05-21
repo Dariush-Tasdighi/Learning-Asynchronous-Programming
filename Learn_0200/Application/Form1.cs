@@ -10,11 +10,11 @@ public partial class Form1 : Infrastructure.BaseForm
 	private void RunButton_Click
 		(object sender, System.EventArgs e)
 	{
-		var client =
-			new System.Net.WebClient();
-
 		var websiteUrl =
 			"http://date2date.ir";
+
+		var client =
+			new System.Net.WebClient();
 
 		var websiteContent =
 			client.DownloadString(address: websiteUrl);

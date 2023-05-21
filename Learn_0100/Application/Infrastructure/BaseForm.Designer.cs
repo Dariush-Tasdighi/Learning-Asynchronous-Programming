@@ -1,4 +1,4 @@
-﻿namespace Application.Infrastructure;
+﻿namespace Infrastructure;
 
 partial class BaseForm
 {

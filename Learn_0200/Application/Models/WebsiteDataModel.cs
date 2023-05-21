@@ -8,7 +8,10 @@ public class WebsiteDataModel : object
 		Url = url;
 	}
 
-	public string Url { get; set; }
+	//public string Url { get; set; }
+	//public string Url { get; private set; }
+	//public string Url { get; }
+	public string Url { get; init; }
 
 	public string? Content { get; set; }
 

@@ -7,33 +7,13 @@ public partial class Form3 : Infrastructure.BaseForm
 		InitializeComponent();
 	}
 
-	private void RunButton_Click
-		(object sender, System.EventArgs e)
-	{
-		var watch =
-			System.Diagnostics.Stopwatch.StartNew();
-
-		DownloadWebsitesAsync();
-
-		watch.Stop();
-
-		var elapsedMilliseconds =
-			watch.ElapsedMilliseconds;
-
-		resultTextBox.Text +=
-			$"Total Execution Time: {elapsedMilliseconds:#,##0} Milliseconds";
-	}
-
-	/// <summary>
-	/// New
-	/// </summary>
-	//private async void RunButton_Click
+	//private void RunButton_Click
 	//	(object sender, System.EventArgs e)
 	//{
 	//	var watch =
 	//		System.Diagnostics.Stopwatch.StartNew();
 
-	//	await DownloadWebsitesAsync();
+	//	DownloadWebsitesAsync();
 
 	//	watch.Stop();
 
@@ -47,7 +27,27 @@ public partial class Form3 : Infrastructure.BaseForm
 	/// <summary>
 	/// New
 	/// </summary>
-	//private void DownloadWebsitesAsync()
+	private async void RunButton_Click
+		(object sender, System.EventArgs e)
+	{
+		var watch =
+			System.Diagnostics.Stopwatch.StartNew();
+
+		await DownloadWebsitesAsync();
+
+		watch.Stop();
+
+		var elapsedMilliseconds =
+			watch.ElapsedMilliseconds;
+
+		resultTextBox.Text +=
+			$"Total Execution Time: {elapsedMilliseconds:#,##0} Milliseconds";
+	}
+
+	/// <summary>
+	/// New
+	/// </summary>
+	//private void DownloadWebsites()
 	private async System.Threading.Tasks.Task DownloadWebsitesAsync()
 	{
 		var websitesUrls =
@@ -72,6 +72,7 @@ public partial class Form3 : Infrastructure.BaseForm
 
 			// **************************************************
 			// Error! Cross-thread operation not valid
+			// **************************************************
 			//await System.Threading.Tasks.Task.Run(() =>
 			//{
 			//	var output =
@@ -115,7 +116,7 @@ public partial class Form3 : Infrastructure.BaseForm
 		(Models.WebsiteDataModel websiteData)
 	{
 		resultTextBox.Text +=
-			$"{websiteData.Url} downloaded: {websiteData.ContentLength} Characters long.";
+			$"{websiteData.Url} downloaded: {websiteData.ContentLength:#,##0} Characters long.";
 
 		resultTextBox.Text +=
 			System.Environment.NewLine;

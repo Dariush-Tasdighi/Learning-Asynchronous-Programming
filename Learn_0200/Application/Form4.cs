@@ -1,6 +1,4 @@
-﻿using System.Xml;
-
-namespace Application;
+﻿namespace Application;
 
 public partial class Form4 : Infrastructure.BaseForm
 {
@@ -33,6 +31,11 @@ public partial class Form4 : Infrastructure.BaseForm
 	{
 		var websitesUrls =
 			Infrastructure.Utility.GetWebsiteUrls();
+
+		// دقت کنید که دستور ذیل غلط است
+		//var tasks =
+		//	new System.Collections.Generic
+		//	.List<System.Threading.Tasks.Task>();
 
 		var tasks =
 			new System.Collections.Generic
@@ -75,7 +78,7 @@ public partial class Form4 : Infrastructure.BaseForm
 		(Models.WebsiteDataModel websiteData)
 	{
 		resultTextBox.Text +=
-			$"{websiteData.Url} downloaded: {websiteData.ContentLength} Characters long.";
+			$"{websiteData.Url} downloaded: {websiteData.ContentLength:#,##0} Characters long.";
 
 		resultTextBox.Text +=
 			System.Environment.NewLine;
